@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "touch .env && source .env && cypress run --browser chrome --config-file cypress.json --env username=$BILLING_USERNAME,password=$BILLING_PASSWORD",
+    "dev": "yarn && touch .env && source .env && cypress run --browser chrome --config-file cypress.json --env username=$BILLING_USERNAME,password=$BILLING_PASSWORD",
     "start": "cypress run --headless --config-file cypress.json --env username=$BILLING_USERNAME,password=$BILLING_PASSWORD"
   },
   "author": "",
