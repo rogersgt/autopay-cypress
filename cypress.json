@@ -1,7 +1,11 @@
 {
   "baseUrl": "https://bill.charlestonwater.com/",
   "chromeWebSecurity": true,
+  "fixturesFolder": "src/fixtures",
+  "integrationFolder": "src/integration",
+  "pluginsFile": "src/plugins/index.js",
   "screenshotsFolder": "reports/media/screenshots",
+  "supportFile": "src/support/index.js",
   "videosFolder": "reports/media/videos",
   "reporter": "mochawesome",
   "viewportHeight": 800,
@@ -11,6 +15,5 @@
     "overwrite": false,
     "html": false,
     "json": true
-  },
-  "env": {}
+  }
 }
