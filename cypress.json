@@ -1,0 +1,16 @@
+{
+  "baseUrl": "https://www.charlestonwater.com/",
+  "chromeWebSecurity": false,
+  "screenshotsFolder": "reports/media/screenshots",
+  "videosFolder": "reports/media/videos",
+  "reporter": "mochawesome",
+  "viewportHeight": 800,
+  "viewportWidth": 1280,
+  "reporterOptions": {
+    "reportDir": "reports",
+    "overwrite": false,
+    "html": false,
+    "json": true
+  },
+  "env": {}
+}
