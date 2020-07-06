@@ -1,6 +1,6 @@
 {
-  "baseUrl": "https://www.charlestonwater.com/",
-  "chromeWebSecurity": false,
+  "baseUrl": "https://bill.charlestonwater.com/",
+  "chromeWebSecurity": true,
   "screenshotsFolder": "reports/media/screenshots",
   "videosFolder": "reports/media/videos",
   "reporter": "mochawesome",

@@ -4,15 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "yarn && cypress open --headed --browser chrome --config-file cypress.json",
-    "test": "cypress run --headed --browser chrome --config-file cypress.json",
-    "start": "cypress run --headless --config-file cypress.json"
+    "dev": "touch .env && source .env && cypress run --browser chrome --config-file cypress.json --env username=$BILLING_USERNAME,password=$BILLING_PASSWORD",
+    "start": "cypress run --headless --config-file cypress.json --env username=$BILLING_USERNAME,password=$BILLING_PASSWORD"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^4.9.0",
-    "mocha": "^8.0.1",
-    "mochawesome": "^6.1.1"
+    "@babel/core": "7.10.4",
+    "@babel/plugin-transform-runtime": "7.10.4",
+    "@babel/preset-env": "7.10.4",
+    "@babel/register": "7.10.4",
+    "@babel/runtime": "7.10.4",
+    "cypress": "4.9.0",
+    "mocha": "8.0.1",
+    "mochawesome": "6.1.1",
+    "mochawesome-report-generator": "5.1.0"
+  },
+  "devDependencies": {
+    "dotenv-cli": "3.2.0"
   }
 }
