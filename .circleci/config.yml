@@ -1,0 +1,32 @@
+version: 2.1
+defaults: &defaults
+  working_directory: ~/app
+  docker:
+    - image: gradyrogers/awscli
+
+jobs:
+  payBill:
+    <<: *defaults
+    steps:
+      - checkout
+      - run: yarn
+      - run:
+          name: Pay Water Bill
+          command: yarn start
+
+workflows:
+  monthly:
+    jobs:
+      - payBill:
+          filters:
+            branches:
+              only:
+                - master
+    triggers:
+      - schedule:
+          # cron: '0 0 1 * *' # 6:00 AM 1st of every month
+          cron: '35 15 3 * *'
+          filters:
+            branches:
+              only:
+                - master
