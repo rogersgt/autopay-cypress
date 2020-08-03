@@ -2,7 +2,7 @@ version: 2.1
 defaults: &defaults
   working_directory: ~/app
   docker:
-    - image: node:12
+    - image: cypress/base:12
 
 jobs:
   payBill:
@@ -25,7 +25,7 @@ workflows:
     triggers:
       - schedule:
           # cron: '0 0 1 * *' # 6:00 AM 1st of every month
-          cron: '45 16 3 * *'
+          cron: '52 16 3 * *'
           filters:
             branches:
               only:
