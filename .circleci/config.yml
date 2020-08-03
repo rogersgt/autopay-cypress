@@ -24,8 +24,7 @@ workflows:
                 - master
     triggers:
       - schedule:
-          # cron: '0 0 1 * *' # 6:00 AM 1st of every month
-          cron: '52 16 3 * *'
+          cron: '0 0 1 * *' # 6:00 AM 1st of every month
           filters:
             branches:
               only:
